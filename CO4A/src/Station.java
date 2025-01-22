@@ -46,6 +46,7 @@ public class Station {
     	for (int i = 0; i < hired_detectives; i++) {
     		System.out.println(detectives[i].toString());
     	}
+    	System.out.println();
     }
     
     public void doHire() {
