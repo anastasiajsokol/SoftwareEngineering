@@ -36,8 +36,8 @@ public class PublicSafety {
     }
     
     /**
-     *  hire a new detective to a station
-     *  prints error message if 
+     *  Hire a new detective to a station
+     *  Prints error message if station is at capacity
      * 
      * @param hireToCity whether to hire to city or university
     **/
