@@ -32,7 +32,7 @@ public class PublicSafety {
     **/
     public void doHire(boolean hireToCity){
         var station = hireToCity ? cityStation : univerityStation;
-        station.hireDetective();
+        station.doHire();
     }
 
     /**
