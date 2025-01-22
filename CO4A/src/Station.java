@@ -52,6 +52,9 @@ public class Station {
     		nextAvailableBadgeNumber++;
     		hired_detectives++;
     		s.close();
-    	}    	
+    	}
+    	else {
+    		System.out.println("ERROR: Station allready has max number of detectives");
+    	}
     }
 }
