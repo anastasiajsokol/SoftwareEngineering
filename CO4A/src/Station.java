@@ -48,6 +48,7 @@ public class Station {
     public void doHire() {
     	if (hired_detectives < MAX_DETECTIVES_PER_STATION) {
     		Scanner s = new Scanner(System.in);
+    		System.out.println("Detective Name:");
     		detectives[hired_detectives] = new Detective(s.nextLine(), nextAvailableBadgeNumber);
     		nextAvailableBadgeNumber++;
     		hired_detectives++;
