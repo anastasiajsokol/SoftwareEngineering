@@ -7,6 +7,8 @@
  *  @date January 21, 2025
  **/
 
+import java.util.*;
+
 public class Station {
     /**
      *  shared between all stations
@@ -41,5 +43,15 @@ public class Station {
         for(int i = 0; i < hired_detectives; ++i){
             System.out.println(detectives[i]);
         }
+    }
+    
+    public void doHire() {
+    	if (hired_detectives < MAX_DETECTIVES_PER_STATION) {
+    		Scanner s = new Scanner(System.in);
+    		detectives[hired_detectives] = new Detective(s.nextLine(), nextAvailableBadgeNumber);
+    		nextAvailableBadgeNumber++;
+    		hired_detectives++;
+    		s.close();
+    	}    	
     }
 }
