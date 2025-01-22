@@ -3,7 +3,7 @@ import sys
 import os
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-LASTNAME = "_Willits_Sokol"
+LASTNAME = "Willits_Sokol"
 
 def package_directory(path: str):
     path = os.path.abspath(path)
