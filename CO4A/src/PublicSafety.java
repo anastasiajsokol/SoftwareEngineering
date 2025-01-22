@@ -25,17 +25,6 @@ public class PublicSafety {
     }
 
     /**
-     *  Hire a new detective to a station
-     *  Prints error message if already at capacity
-     * 
-     * @param hireToCity whether to hire to city or university
-    **/
-    public void doHire(boolean hireToCity){
-        var station = hireToCity ? cityStation : univerityStation;
-        station.doHire();
-    }
-
-    /**
      *  Prints all detectives working at public safety office
     **/
     public void printDetectiveLists(){
@@ -44,5 +33,14 @@ public class PublicSafety {
             // print the stations list of detectives
             station.printDetectiveLists();
         }
+    }
+    
+    public void doHire(boolean b) {
+    	if (b) {
+    		cityStation.doHire();
+    	}
+    	else {
+    		univerityStation.doHire();
+    	}
     }
 }
