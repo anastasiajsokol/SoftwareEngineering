@@ -40,9 +40,16 @@ public class Station {
      *  Prints all detectives working at station
     **/
     public void printDetectiveLists(){
+        // print header
+        System.out.println("List of detectives for " + stationName);
+
+        // print each detective
         for(int i = 0; i < hired_detectives; ++i){
             System.out.println(detectives[i]);
         }
+
+        // ending newline
+        System.out.println();
     }
     
     public void doHire() {
