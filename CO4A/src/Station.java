@@ -40,36 +40,23 @@ public class Station {
      *  Prints all detectives working at station
     **/
     public void printDetectiveLists(){
-        // print header
-        System.out.println("List of detectives for " + stationName);
-
-        // print each detective
-        for(int i = 0; i < hired_detectives; ++i){
-            System.out.println(detectives[i]);
-        }
-
-        // ending newline
-        System.out.println();
+    	System.out.println("List of detectives for " + stationName);
+    	for (Detective d : detectives) {
+    		System.out.println(d.toString());
+    	}
     }
     
     public void doHire() {
-        // check if we can hire a new detective
-        if(hired_detectives == MAX_DETECTIVES_PER_STATION){
-            System.out.println("Can't hire any more detectives for " + stationName);
-            return;
-        }
-
-        // display prompt
-        System.out.print("New hire for " + stationName + "...Enter detective's name: ");
-
-        // create detective from user input
-        Scanner input = new Scanner(System.in);
-        detectives[hired_detectives] = new Detective(input.nextLine(), nextAvailableBadgeNumber);
-        
-        // update the badge number and number of hired detectives
-        nextAvailableBadgeNumber++;
-        hired_detectives++;
-
-        // note: do not close the scanner, which will close System.in
+    	if (hired_detectives < MAX_DETECTIVES_PER_STATION) {
+    		Scanner s = new Scanner(System.in);
+    		System.out.print("New Hire for " + stationName + "...Enter detective's name: ");
+    		detectives[hired_detectives] = new Detective(s.nextLine(), nextAvailableBadgeNumber);
+    		nextAvailableBadgeNumber++;
+    		hired_detectives++;
+    		s.close();
+    	}
+    	else {
+    		System.out.println("Can't hire any more detectives for " + stationName);
+    	}
     }
 }
