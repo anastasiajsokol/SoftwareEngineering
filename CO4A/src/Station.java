@@ -43,8 +43,8 @@ public class Station {
     **/
     public void printDetectiveLists(){
     	System.out.println("List of detectives for " + stationName);
-    	for (Detective d : detectives) {
-    		System.out.println(d.toString());
+    	for (int i = 0; i < hired_detectives; i++) {
+    		System.out.println(detectives[i].toString());
     	}
     }
     
