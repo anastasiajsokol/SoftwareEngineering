@@ -25,6 +25,17 @@ public class PublicSafety {
     }
 
     /**
+     *  hire a new detective to a station
+     *  prints error message if 
+     * 
+     * @param hireToCity whether to hire to city or university
+    **/
+    public void doHire(boolean hireToCity){
+        var station = hireToCity ? cityStation : univerityStation;
+        station.hireDetective();
+    }
+
+    /**
      *  Prints all detectives working at public safety office
     **/
     public void printDetectiveLists(){
