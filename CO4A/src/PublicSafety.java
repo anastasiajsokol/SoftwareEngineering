@@ -35,12 +35,14 @@ public class PublicSafety {
         }
     }
     
-    public void doHire(boolean b) {
-    	if (b) {
-    		cityStation.doHire();
-    	}
-    	else {
-    		univerityStation.doHire();
-    	}
+    /**
+     *  hire a new detective to a station
+     *  prints error message if 
+     * 
+     * @param hireToCity whether to hire to city or university
+    **/
+    public void doHire(boolean hireToCity){
+        var station = hireToCity ? cityStation : univerityStation;
+        station.doHire();
     }
 }
