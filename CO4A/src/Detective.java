@@ -1,3 +1,4 @@
+
 /**
  *  Detective class
  *  
@@ -11,12 +12,13 @@ public class Detective {
     private String name;
     private int badgeNumber;
 
-    public Detective(String name, int badgeNumber){
+    public Detective(String name, int badgeNumber) {
         this.name = name;
         this.badgeNumber = badgeNumber;
     }
 
-    public String toString(){
+    @Override
+    public String toString() {
         return "Detective [Badge=" + badgeNumber + ", Name=" + name + "]";
     }
 }
