@@ -5,27 +5,46 @@
  *  @author Gray Willits
 **/
 public abstract class Person {
-    private String name;
+    private String myName;
     private String occupation;
 
-    Person(String name, String occupation){
-        this.name = name;
+    public Person(String myName, String occupation) {
+        this.myName = myName;
         this.occupation = occupation;
     }
 
-    void askName(){
-        // TODO: display question for name
+    /*
+     * Displays the person asking another person their name
+    */
+    public void askName() {
+        System.out.println("What is your name?");
     }
 
-    void giveName(){
-        // TODO: display name
+    /*
+     * Displays a person giving their name
+    */
+    public void giveName() {
+        System.out.println("My name is " + myName);
     }
 
-    void whatIDo(){
-        // TODO: display occupation
+    /*
+     * Displays the person's occupation
+    */
+    public void whatIDo() {
+        System.out.println("I am a" + ("aeiouAEIOU".contains(occupation.substring(0, 1)) ? "n " : " ") + occupation);
     }
 
-    abstract void askQuestion();
+	/*
+	 * Displays a question
+	*/
+    public abstract void askQuestion();
     
-    abstract void answerQuestion();
+	/*
+	 * Displays an answer to a question
+	*/
+    public abstract void answerQuestion();
 }
+
+
+
+
