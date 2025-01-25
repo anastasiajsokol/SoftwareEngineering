@@ -23,8 +23,7 @@ public class Party {
 		// with your own.   This should be the only code you need to change in party.java
 		people.add(new Pirate("Jack Sparrow", "Captian"));
 		people.add(new Phineas());
-
-		// TODO: add last person subclass!
+		people.add(new OldMan("Tom"));
 	}
 	
 	/**
