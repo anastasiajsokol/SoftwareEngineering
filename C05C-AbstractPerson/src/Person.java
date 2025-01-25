@@ -33,7 +33,7 @@ public abstract class Person {
 	 * Displays the person's occupation
 	 */
 	public void whatIDo() {
-		System.out.println("I am a" + ("aeiouAEIOU".contains(occupation.substring(0, 1)) ? "n " : " ") + occupation);
+		System.out.println("I am a" + occupation);
 	}
 
 	/*
