@@ -1,3 +1,8 @@
+"""
+    Package up general Java directories into the Eclipse package format
+    TODO: inject the project name into .project!
+"""
+
 import shutil
 import sys
 import os
@@ -16,7 +21,9 @@ def package_directory(path: str):
     print("faking project meta files...")
 
     template = os.path.join(ROOT, "template")
-    files = [".project", ".classpath", ".settings/org.eclipse.jdt.core.prefs"]
+    # TODO: properly parse .project (for now just copy settings)
+    # files = [".project", ".classpath", ".settings/org.eclipse.jdt.core.prefs"]
+    files = [".settings/org.eclipse.jdt.core.prefs"]
 
     os.makedirs(os.path.join(path, ".settings"), exist_ok=True)
     for file in files:
